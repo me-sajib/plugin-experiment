@@ -1,2 +1,2 @@
-"# wp-plugin-experiment" 
+# wp-plugin-experiment
 
