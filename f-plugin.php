@@ -52,5 +52,23 @@
 	}
 	
 	add_filter("the_content", "fplugin_author_bio");
+	
+	function fplugin_top_content($a, $b){
+		
+		echo "<h1>Top content</h1>".$a .$b;
+	}
+	
+	add_action("fplugin_top_content_page", "fplugin_top_content", 10, 2);
 	  
-	  
+	 
+	function fplugin_bottom_content(){
+		echo "<h1>Bottom COntent</h1>";
+	}
+	
+	add_action("fplugin_bottom_content", "fplugin_bottom_content");
+	
+	function fplugin_welcome_msg($msg){
+		return "Hello sir, welcome to our website";
+	}
+	
+	add_filter("fplugin_welcome_msg", "fplugin_welcome_msg");
